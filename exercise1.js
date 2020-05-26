@@ -7,6 +7,14 @@
 
 //your code...
 
+let temperature = function() {
+    let currentTemp = 60;
+    currentTemp = (currentTemp - 32) * (5/9);
+    console.log(currentTemp + "° Celsius");
+    currentTemp = currentTemp * (9/5) + 32;
+    console.log(currentTemp + "° Fahrenheit")
+}
+
 
 
 
@@ -18,7 +26,15 @@
 
 //your code...
 
-
+let age = function() {
+    var currentAge = 30;
+    if (currentAge >= 18){
+        console.log("Yes");
+    }
+    else {
+        console.log("No");
+    }
+}
 
 
 
@@ -29,6 +45,14 @@
 // Write a JavaScript function that converts a string to an array. Declare a string variable with "The five boxing wizards jump quickly." Use the split() method to turn the string into an array of strings. (Be sure you separate the string into words, not characters.) After you have finished, use the join() method to change the array back into a string.
 
 //your code...
+
+let stringArray = function(){
+    let str = "The five boxing wizards jump quickly.";
+    str = str.split(" ")
+    console.log(str);
+    str = str.join();
+    console.log(str);
+}
 
 
 
