@@ -123,6 +123,22 @@ let oddEven = function(){
 
 //your code...
 
+let printInt = function() {
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("TEKcamp");
+        }
+        else if (i % 3 === 0) {
+            console.log("TEK");
+        }
+        else if (i % 5 === 0) {
+            console.log("camp");
+        }
+        else {
+            console.log(i);
+        }
+    }
+}
 
 /************************************************************* */
 // Problem 8:
@@ -132,6 +148,10 @@ const nums = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 // and 9: the zeroth, third, sixth, and ninth values.
 
 //your code...
+
+for (let i = 0; i <= 10; i = i +3) {
+    console.log(nums[i]);
+}
 
 
 
@@ -143,6 +163,18 @@ const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','ama
 // Using both the foodArray and the adjectiveArray, make a
 // "for" loop that console.log()'s a sentence for each
 // corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  "Potatoes are salty", "Lemon is sour".
+
+var school = 'TEKcamp'
+foodArray[6] = school;
+console.log(foodArray[6]);
+for (i = 0; i <= 7; i++) {
+    if (foodArray[i].endsWith("s")) {
+        console.log(foodArray[i] + " are " + adjectiveArray[i]);
+    }
+    else {
+        console.log(foodArray[i] + " is " + adjectiveArray[i]);
+    }
+}
 
 /************************************************************* */
 // Bonus Assignment: Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly does one of the 4 operations whenever it is run.  the doMath() function should print out what mathetmatical function was carried out.  The doMath() function should return the computed value of any operation performed.
