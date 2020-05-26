@@ -12,7 +12,6 @@ let temperature = function() {
     currentTemp = (currentTemp - 32) * (5/9);
     console.log(currentTemp + "° Celsius");
     currentTemp = currentTemp * (9/5) + 32;
-    console.log(currentTemp + "° Fahrenheit")
 }
 
 
@@ -46,10 +45,9 @@ let age = function() {
 
 //your code...
 
-let stringArray = function(){
+let stringArray = function() {
     let str = "The five boxing wizards jump quickly.";
-    str = str.split(" ")
-    console.log(str);
+    str = str.split();
     str = str.join();
     console.log(str);
 }
@@ -66,6 +64,14 @@ let stringArray = function(){
 
 //your code...
 
+let phoneReverse = function() {
+    let phone = "1234567";
+    phone = phone.split("");
+    phone = phone.reverse();
+    phone = phone.join("");
+    console.log(phone);
+}
+
 
 
 
@@ -76,8 +82,15 @@ let stringArray = function(){
 
 //your code...
 
-
-
+let makeCar = function() {
+    var car = {
+        make: "Toyota",
+        model: "Camry",
+        year: "2002",
+        color: "Red",
+    }
+    console.log(car.year, car.color, car.make, car.model);
+}
 
 
 
@@ -87,6 +100,19 @@ let stringArray = function(){
 
 
 //your code...
+
+let oddEven = function(){
+    for (let i = 0; i <= 15; i++) {
+        if (i === 0) {
+            console.log(i + " is even");
+        }
+        else if (i % 2 === 0) {
+            console.log(i + " is even");
+        }
+        else
+        console.log (i + " is odd");
+    }
+}
 
 
 
