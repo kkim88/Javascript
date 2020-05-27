@@ -11,6 +11,12 @@ for(let i=0; i<10; i++) {
 
 //your code...
 
+let i = 0;
+while (i<10) {
+    console.log(" the value of i in the loop is : " + i);
+    i++;
+}
+
 
 
 
@@ -20,6 +26,20 @@ for(let i=0; i<10; i++) {
 //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
 
 //your code...
+
+let num = 30;
+let addition = function() {
+    num = num + 2;
+}
+let mult = function() {
+    num = num * 20;
+}
+let div = function() {
+    num = num / 10 ** 2
+}
+addition();
+mult();
+div();
 
 
 /************************************************************* */
@@ -38,6 +58,20 @@ for(let i=0; i<10; i++) {
 // 125
 // undefined
 // ""
+
+console.log(`20 is ${!!(20)} because nonzero numbers are truthy.`);
+console.log(`0 is ${!!(0)} because the number 0 is falsy.`);
+console.log(`"zero" is ${!!("zero")} because it is strings with characters in them are truthy.`);
+const zero = 20; //variable must be defined for the String interpolation to work.
+console.log(`const zero = 20; is ${!!(zero)} because it is a variable with a value of 20 and nonzero numbers are truthy.`);
+console.log(`null is ${!!(null)} because the null values are falsy.`);
+console.log(`"0" is ${!!("0")} because it is a string consisting of the number 0 and not numerical value of 0 and a string of a single character is truthy.`);
+console.log(`!"" is ${!!(!"")} because the ! is a logical operator meaning "not", making the value "not false" and therefore truthy.`);
+console.log(`{} is ${!!({})} because objects are truthy.`);
+console.log(`() => {console.log("hello TEKcamp!"); is ${!!(() => {console.log("hello TEKcamp!");})} because it is a function and functions are truthy.`);
+console.log(`125 is ${!!(125)} because nonzero numbers are truthy.`);
+console.log(`undefined is ${!!(undefined)} because undefined values are falsy.`);
+console.log(`"" is ${!!("")} because the empty strings are falsy.`);
 
 
 
