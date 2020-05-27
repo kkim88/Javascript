@@ -82,36 +82,72 @@ console.log(`"" is ${!!("")} because the empty strings are falsy.`);
 
 const day = "friday";
 
-if(day === "monday") {
-    console.log("we got a long week ahead of us...");
-} else if(day === "tuesday") {
-    console.log("tuesday's are still beterr than mondays, but LONG way to go still");
-} else if (day === "wednesday") {
-    console.log("We are smack dab in the middle of the week");
-} else if (day === "thursday") {
-    console.log("Thursday night... the mood is right");
-} else if (day === "friday") {
-    console.log("TGIF.  Friday truly is the best day of the week!")
-} else {
-    console.log("It's a weekend!")
+// ** KEPT THE OLD CODE COMMENTED OUT FOR REFERENCE SEE FOLLOWING BLOCK FOR SWITCH STATEMENT**
+
+// if(day === "monday") {
+//    console.log("we got a long week ahead of us...");
+//} else if(day === "tuesday") {
+//    console.log("tuesday's are still beterr than mondays, but LONG way to go still");
+//} else if (day === "wednesday") {
+//   console.log("We are smack dab in the middle of the week");
+//} else if (day === "thursday") {
+//    console.log("Thursday night... the mood is right");
+//} else if (day === "friday") {
+//    console.log("TGIF.  Friday truly is the best day of the week!")
+//} else {
+//    console.log("It's a weekend!")
+//}
+
+switch (day) {
+    case "monday": {
+        console.log("we got a long week ahead of us...");
+        break;
+    }
+    case "tuesday": {
+        console.log("tuesday's are still beterr than mondays, but LONG way to go still");
+        break;
+    }
+    case "wednesday": {
+        console.log("We are smack dab in the middle of the week");
+        break;
+    }
+    case "thursday": {
+        console.log("Thursday night... the mood is right");
+        break;
+    }
+    case "friday": {
+        console.log ("TGIF.  Friday truly is the best day of the week!");
+        break;
+    }
+    default: {
+        console.log ("It's a weekend!");
+    }
 }
 
 
 
 /************************************************************* */
 // Problem 5: Refactor the following functions to use a ternary expression:
+
+// ** ORIGINAL CODE COMMENTED OUT FOR REFERENCE **
 const age = 10;
-if (age > 21) console.log("adult"); else {
-    console.log("minor");
-}
+//if (age > 21) console.log("adult"); else {
+//    console.log("minor");
+//}
 
-if (age > 13 && age < 19) console.log('teen'); else {
-    console.log("not a teenager");
-};
+let adultMinor = age > 21 ? console.log("adult") : console.log("minor");
 
-if (age > 65) console.log("retired"); else {
-    console.log("still working...");
-}
+//if (age > 13 && age < 19) console.log('teen'); else {
+//    console.log("not a teenager");
+//};
+
+let teenager = age > 13 && age < 19 ? console.log("teen") : console.log("not a teenager");
+
+//if (age > 65) console.log("retired"); else {
+//    console.log("still working...");
+//}
+
+let retirement = age > 65 ? console.log("retired") : console.log("still working...");
 
 
 /************************************************************* */
@@ -131,11 +167,44 @@ if (age > 65) console.log("retired"); else {
 
 //your code...
 
+let me = {
+    name: "Katherine Kim",
+    age: 31,
+    gender: "female",
+    hobbies: "video games, writing, trading cards",
+    profession: "student",
+    education: "bachelor's",
+    learn: function() {
+        console.log(this.name);
+    },
+    birthday: function() {
+        let newAge = this.age + 1;
+        console.log("On her next birthday, " + this.name + " will be " + newAge + " years old.");
+    }
+}
+
 
 /************************************************************* */
 // Problem 6: Create an object literal that represents any object in the real world that you like.  Try to come up with a realistic set of properties and methods that would accurately describe that object.  In at least one of your methods, use the this keyword to refer back to one of the properties you defined on this object literal.  
 
 //your code...
+
+let dog = {
+    name: "Lily",
+    gender: "female",
+    color: "white",
+    age: 7,
+    height: 1.5,
+    weight: 20,
+    voice: "loud",
+    about: function() {
+        console.log(this.name + " is a " + this.gender + this.color + " dog and is " + this.age + " years old.");
+        console.log(this.name + " is " + this.height + " feet tall and weighs " + this.weight + " pounds.")
+    },
+    bark: function() {
+        console.log(this.name + " barks with a " + this.voice + " voice.");
+    }
+}
 
 
 
@@ -144,7 +213,15 @@ if (age > 65) console.log("retired"); else {
 
 //your code...
 
+let favoriteData = function() {
+    let fav1 = "string";
+    let fav2 = "boolean";
+    let fav3 = "object";
 
+    console.log(`My first favorite data type is ${fav1} because they are have such a wide array of applications.`)
+    console.log(`My second favorite data type is ${fav2} because true and false are two simple concepts that make so many things possible.`)
+    console.log(`My third favorite data type is ${fav3}, because you can group data together and saying "object oriented programming" sounds cool to people.`)
+}
 
 /************************************************************* */
 //Bonus assignments:
