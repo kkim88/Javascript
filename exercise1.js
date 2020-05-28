@@ -99,8 +99,12 @@ let makeCar = function() {
         model: "Camry",
         year: "2002",
         color: "Red",
-    }
-    console.log(car.year, car.color, car.make, car.model);
+        }
+}
+
+function getCar() {
+  console.log(car.year, car.color, car.make, car.model);
+  return;
 }
 
 
