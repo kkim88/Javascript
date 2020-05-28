@@ -155,15 +155,26 @@ function sortNums(numbers,desc=false) {
 
 const mapObj = new Map();
 mapObj.set({company : "TEKsystems"},"object");
+mapObj.set(1, "number");
+mapObj.set("Hello", "string");
+mapObj.set([2,3], "array");
+mapObj.set(false, "boolean");
+mapObj.set(null, "null value");
 
 
-console.log(mapObj.has({company : "TEKsystems"}));  
+console.log(mapObj.has({company : "TEKsystems"})); 
 //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code on line 106, so you can successfully check to see if {company : "TEKsystems"} exists in the mapObj.
 
 //your code...
 
+console.log("The reason the statement returns false is because the object is not stored in a variable.")
+mapObj.set(companyObject = {company : "TEKsystems"},"object");
+console.log(mapObj.has(companyObject));
+
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
 
+let mapArray = Array.from(mapObj.values());
+console.log(mapArray);
 
 /************************************************************* */
 //Problem 11:
