@@ -7,12 +7,23 @@
 
 //your code...
 
-let temperature = function() {
-    let currentTemp = 60;
-    currentTemp = (currentTemp - 32) * (5/9);
-    console.log(currentTemp + "° Celsius");
-    currentTemp = currentTemp * (9/5) + 32;
+let currentTemp = 60;
+function toCelsius(cel) {
+    cel = (currentTemp - 32) * (5/9);
+    return cel;
 }
+
+currentTemp = toCelsius();
+
+console.log(currentTemp + "° Celsius");
+
+function toFahrenheit(fah) {
+    fah = currentTemp * (9/5) + 32;
+    return fah
+}
+
+currentTemp = toFahrenheit()
+console.log(currentTemp + "° Fahrenheit");
 
 
 
