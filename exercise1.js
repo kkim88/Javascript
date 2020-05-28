@@ -93,14 +93,12 @@ let phoneReverse = function() {
 
 //your code...
 
-let makeCar = function() {
-    var car = {
+var car = {
         make: "Toyota",
         model: "Camry",
         year: "2002",
         color: "Red",
         }
-}
 
 function getCar() {
   console.log(car.year, car.color, car.make, car.model);
