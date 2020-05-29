@@ -136,14 +136,22 @@ return dnaReplace;
 // 7.a - Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
 const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
+// 1. find a way to convert words to numbers
+// 2. remove all non numbers from array. use filter()???
+// is there something like parseInt() for arrays?
+// 3. find maximum numerical value
+
 function maxNumber(numbers) {
     //your code...
 }
 
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 
+// sort() sorts alphabetically, find a way to do it numerically
+// find a way to do it in descending order
+
 function sortNums(numbers,desc=false) {
-    //your code...
+    numbers.sort(function(a, b){return b-a;});
 };
 
 
