@@ -47,7 +47,7 @@
 
     button.oneclick = function() {
 
-        let inpValue = input.value();
+        let inpValue = input.value;
         input.value = "";
 
         const ulItem = document.createElement("li");
@@ -55,12 +55,12 @@
         const buttonVar = document.createElement("button");
 
         ulItem.appendChild(spanVar);
-        ulItem.appendChild(buttonVar);
         spanVar.textContent = inpValue;
+        ulItem.appendChild(buttonVar);
         buttonVar.textContent = "Delete";
         ulList.appendChild(ulItem);
 
-        buttonVar.oneclick = function() {
+        buttonVar.oneclick = function(e) {
             ulList.removeChild(ulItem);
         }
 
