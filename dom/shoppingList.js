@@ -45,9 +45,9 @@
     const input = document.querySelector("input");
     const button = document.querySelector("button");
 
-    button.oneclick = function() {
+    button.onclick = function() {
 
-        let inpValue = input.value;
+        const inpValue = input.value;
         input.value = "";
 
         const ulItem = document.createElement("li");
@@ -60,7 +60,7 @@
         buttonVar.textContent = "Delete";
         ulList.appendChild(ulItem);
 
-        buttonVar.oneclick = function(e) {
+        buttonVar.onclick = function(e) {
             ulList.removeChild(ulItem);
         }
 
