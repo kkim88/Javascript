@@ -55,8 +55,8 @@
         const buttonVar = document.createElement("button");
 
         ulItem.appendChild(spanVar);
-        spanVar.textContent = inpValue;
         ulItem.appendChild(buttonVar);
+        spanVar.textContent = inpValue;
         buttonVar.textContent = "Delete";
         ulList.appendChild(ulItem);
 
