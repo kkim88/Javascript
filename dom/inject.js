@@ -2,7 +2,7 @@
 */
 
 let paraInject = document.createElement("p");
-paraInject.innerHTML = '<center>'
+paraInject.innerHTML = <center>
 <h1><i>HTML Practice Exercise TEKcamp.</i></h1>'
 <h2><a href="">TEKsystems "TEKcamp"</a></h2>
 </center>
