@@ -9,7 +9,13 @@
 
 //your code...
 
-
+let str ="";
+if (str === "") {
+    console.log("true");
+}
+else {
+    console.log("false");
+}
 
 
 
@@ -18,10 +24,11 @@
 // Problem 2:
 // Declare a variable that holds a string (e.g., ‘Learning JavaScript is fun!’). Replace a word so that the output uses the new word instead (e.g., ‘Learning JavaScript is cool!). 
 
-
-
 //your code...
 
+let str2 = "Learning Javascript is fun!";
+let str3 = str2.replace("fun", "cool");
+console.log(str3);
 
 
 
@@ -33,7 +40,9 @@
 
 //your code...
 
-
+let numArray = [1, 2, 3, 4, 5];
+let numArray1 = numArray.map(x => x ** 2);
+console.log(numArray1);
 
 
 
@@ -45,6 +54,11 @@
 
 
 //your code...
+
+let numArray2 = [1, 3, 5, 7, 9, 1, 3, 5];
+let numArray3 = numArray2.filter((num) => num > 3);
+console.log(numArray3);
+
 
 
 
@@ -59,6 +73,9 @@
 
 //your code...
 
+let numArray4 = [0, 6, 7, 8, 9];
+let numSum = (sum, value) => sum + value;
+console.log(numArray4.reduce(numSum));
 
 
 
@@ -74,8 +91,42 @@
 
 //your code...
 
+// 1. G = C, T = A
+// 2. separate characters
+// 3. replace with pairings
+// 4. output new string
 
+function dnaPairs(dnaString) {
 
+    let dnaReplace = dnaString.split("");
+    let charReplace = function(char) {
+        switch (char) {
+            case "G": {
+                return "C";
+                break;
+            }
+            case "C": {
+                return "G";
+                break;
+            }
+            case "T": {
+                return "A";
+                break;
+            }
+            case "A": {
+                return "T";
+                break;
+            }
+        };
+    }
+
+for (let i = 0; i < dnaString.length; i++) {
+    charReplace(dnaString[i]);
+}
+
+return dnaReplace;
+
+}
 
 
 
@@ -85,14 +136,22 @@
 // 7.a - Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.  
 const numbers = [2,23,1,2,1,1,1,2,2.5,20,200,2000,,{k:1},20000,19999,1878,140,23,4,"sk",true,true,"true-dat","nice","one","two","three","3","tea",[]];
 
+// 1. find a way to convert words to numbers
+// 2. remove all non numbers from array. use filter()???
+// is there something like parseInt() for arrays?
+// 3. find maximum numerical value
+
 function maxNumber(numbers) {
     //your code...
 }
 
 // 7.b -Write a function that sorts the given numbers array.  Allow the function to sort the array in descending order
 
+// sort() sorts alphabetically, find a way to do it numerically
+// find a way to do it in descending order
+
 function sortNums(numbers,desc=false) {
-    //your code...
+    numbers.sort(function(a, b){return b-a;});
 };
 
 
@@ -104,32 +163,68 @@ function sortNums(numbers,desc=false) {
 
 const mapObj = new Map();
 mapObj.set({company : "TEKsystems"},"object");
+mapObj.set(1, "number");
+mapObj.set("Hello", "string");
+mapObj.set([2,3], "array");
+mapObj.set(false, "boolean");
+mapObj.set(null, "null value");
 
 
-console.log(mapObj.has({company : "TEKsystems"}));  
+console.log(mapObj.has({company : "TEKsystems"})); 
 //The above console.log() statmeent returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code on line 106, so you can successfully check to see if {company : "TEKsystems"} exists in the mapObj.
 
 //your code...
 
+console.log("The reason the statement returns false is because the object is not stored in a variable.")
+mapObj.set(companyObject = {company : "TEKsystems"},"object");
+console.log(mapObj.has(companyObject));
+
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
 
+let mapArray = Array.from(mapObj.values());
+console.log(mapArray);
 
 /************************************************************* */
 //Problem 11:
 
 let ones = [1,11,111,1111,11111,111111,1111111,11111111,111111111,1111111111];
 //reverse the array, without modifying the ones array.
+var reversedOnes = [];
+
+for(let i =  ones.length -1; i >= 0; i--) { 
+    reversedOnes.push(ones[i]); 
+}
+console.log(reversedOnes);
 
 
 /************************************************************* */
 //Problem 12:
 //create a function called performer(cb) that takes in a callback function and runs that callback function.  It should return the output of the callback function.
 
-function performer(cb) {
-    //code goes here
-}
+function enterNum(num1) {
+    console.log('Your number is ' + num1);
+  }
+  
+  function performer(cb) {
+    var num1 = prompt('Please enter a number.');
+    cb(num1);
+  }
+  
+  performer(enterNum);
 
 
 /************************************************************* */
 //Bonus assignment:
 //research a new feature of ES6+ and create an example of it's use case here.  Be sure to write comments explaining what the feature is and why it is useful.
+
+// Destructuring: A way to extract data from arrays and objects and use them in variables easily
+
+const petsArray = ["Dog", "Cat", "Fish", "Hamster"];
+
+// If I wanted to take each of the array elements and put them in separate arrays, I would have to repeatedly create new arrays and fill them one by one. Destructuring allows for an easy way to do this.
+
+let [pets1, pets2, pets3, pets4] = petsArray;
+
+// Now if I print pets1, pets2, pets3, and pets4, they will each contain one of the petsArray elements.
+
+console.log(pets1, pets2, pets3, pets4);

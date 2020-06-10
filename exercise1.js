@@ -7,6 +7,24 @@
 
 //your code...
 
+let currentTemp = 60;
+function toCelsius(cel) {
+    cel = (currentTemp - 32) * (5/9);
+    return cel;
+}
+
+currentTemp = toCelsius();
+
+console.log(currentTemp + "° Celsius");
+
+function toFahrenheit(fah) {
+    fah = currentTemp * (9/5) + 32;
+    return fah
+}
+
+currentTemp = toFahrenheit()
+console.log(currentTemp + "° Fahrenheit");
+
 
 
 
@@ -18,7 +36,15 @@
 
 //your code...
 
-
+let age = function() {
+    var currentAge = 30;
+    if (currentAge >= 18){
+        console.log("Yes");
+    }
+    else {
+        console.log("No");
+    }
+}
 
 
 
@@ -29,6 +55,13 @@
 // Write a JavaScript function that converts a string to an array. Declare a string variable with "The five boxing wizards jump quickly." Use the split() method to turn the string into an array of strings. (Be sure you separate the string into words, not characters.) After you have finished, use the join() method to change the array back into a string.
 
 //your code...
+
+let stringArray = function() {
+    let str = "The five boxing wizards jump quickly.";
+    str = str.split();
+    str = str.join();
+    console.log(str);
+}
 
 
 
@@ -42,6 +75,14 @@
 
 //your code...
 
+let phoneReverse = function() {
+    let phone = "1234567";
+    phone = phone.split("");
+    phone = phone.reverse();
+    phone = phone.join("");
+    console.log(phone);
+}
+
 
 
 
@@ -52,8 +93,17 @@
 
 //your code...
 
+var car = {
+        make: "Toyota",
+        model: "Camry",
+        year: "2002",
+        color: "Red",
+        }
 
-
+function getCar() {
+  console.log(car.year, car.color, car.make, car.model);
+  return;
+}
 
 
 
@@ -64,6 +114,19 @@
 
 //your code...
 
+let oddEven = function(){
+    for (let i = 0; i <= 15; i++) {
+        if (i === 0) {
+            console.log(i + " is even");
+        }
+        else if (i % 2 === 0) {
+            console.log(i + " is even");
+        }
+        else
+        console.log (i + " is odd");
+    }
+}
+
 
 
 
@@ -73,6 +136,22 @@
 
 //your code...
 
+let printInt = function() {
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("TEKcamp");
+        }
+        else if (i % 3 === 0) {
+            console.log("TEK");
+        }
+        else if (i % 5 === 0) {
+            console.log("camp");
+        }
+        else {
+            console.log(i);
+        }
+    }
+}
 
 /************************************************************* */
 // Problem 8:
@@ -82,6 +161,10 @@ const nums = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
 // and 9: the zeroth, third, sixth, and ninth values.
 
 //your code...
+
+for (let i = 0; i <= 10; i = i +3) {
+    console.log(nums[i]);
+}
 
 
 
@@ -93,6 +176,18 @@ const adjectiveArray = [ 'salty', 'spicy', 'sour', 'sweet', 'rich','creamy','ama
 // Using both the foodArray and the adjectiveArray, make a
 // "for" loop that console.log()'s a sentence for each
 // corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  "Potatoes are salty", "Lemon is sour".
+
+var school = 'TEKcamp'
+foodArray[6] = school;
+console.log(foodArray[6]);
+for (i = 0; i <= 7; i++) {
+    if (foodArray[i].endsWith("s")) {
+        console.log(foodArray[i] + " are " + adjectiveArray[i]);
+    }
+    else {
+        console.log(foodArray[i] + " is " + adjectiveArray[i]);
+    }
+}
 
 /************************************************************* */
 // Bonus Assignment: Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly does one of the 4 operations whenever it is run.  the doMath() function should print out what mathetmatical function was carried out.  The doMath() function should return the computed value of any operation performed.
